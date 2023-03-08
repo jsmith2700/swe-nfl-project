@@ -16,7 +16,6 @@
     -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap" rel="stylesheet">
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
@@ -28,6 +27,7 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>SWOSU Sports Prediction</title>
+    <link href="App.css" rel="stylesheet">
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -68,6 +68,15 @@
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </div>
+    <button data-info-targets="#info"> INFO</button>
+    <div class="info" id="info">
+      <div class="info-header">
+        <div class="title">Information</div>
+        <button data-close-button class="close">&times;</button>
+      </div>
+      <div class="info body">
+        testing
     </div>
+    <div id="overlay"></div>
   </body>
 </html>
