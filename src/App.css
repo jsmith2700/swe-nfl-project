@@ -4,6 +4,146 @@
   border-style: 1px solid black;
 }
 
+.slider{
+  position: relative;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.homeAway{
+  display: flex;
+  justify-content: space-between;
+}
+
+.image {
+  flex-direction: column;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  align-items: center;
+  border-radius: 10px;
+
+}
+
+.imageTop {
+  flex-direction: column;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  align-items: center;
+
+
+}
+
+.imageBottom {
+  flex-direction: column;
+  width: 80px;
+  height: 80px;
+  align-items: center;
+
+}
+
+.up-arrow {
+  display: flex;
+  font-size: 2rem;
+  color: #000;
+  cursor: pointer;
+  user-select: none;
+}
+
+.down-arrow{
+  display: flex;
+  font-size: 2rem;
+  color: #000;
+  cursor: pointer;
+  user-select: none;
+}
+
+.bg{
+  background-image: url(./NFL\ Project\ Background.png);
+  height: 1700px;
+  background-repeat: repeat-y;
+  margin: 0px;
+  background-size: cover;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  top: 0px;
+  right:0px;
+  bottom: 0px;
+  left: 0px;
+
+}
+
+
+
+.centerBox{
+  margin-top: 400px;
+  max-width: 90vh;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, .4);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, .2);
+  padding: 40px;
+  text-align: center;
+  font-size: 25px;
+  font-family: 'Roboto Condensed';
+  border-style: double;
+  flex-direction: column
+;}
+
+
+.teamSelectBox{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  margin: 15px;
+}
+.teamSelect{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.teamSelectRight{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .navigation
 {
   position:fixed;
@@ -121,139 +261,88 @@
   visibility: visible;
 }
 
-.slider{
-  position: relative;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+.statsTable{
+  border: 5px double rgb(0, 15, 62);
+  margin-top: 10px;
 
-.teamText{
-  margin-bottom: 20px;
 }
-
-.image {
-  flex-direction: column;
-  position: relative;
-  width: 150px;
-  height: 150px;
-  align-items: center;
-  border-radius: 10px;
+.statsCategory{
+  border: 1px solid rgb(0,15, 62);
 
 }
 
-.imageTop {
-  flex-direction: column;
-  position: relative;
-  width: 80px;
-  height: 80px;
-  align-items: center;
 
-
+.statNum{
+  border: 1px solid black;
 }
 
-.imageBottom {
-  flex-direction: column;
-  width: 80px;
-  height: 80px;
-  align-items: center;
-
-}
-
-.up-arrow {
+.middleBox{
   display: flex;
-  font-size: 2rem;
-  color: #000;
-  cursor: pointer;
-  user-select: none;
+  align-items: flex-start;
+  height: auto;
 }
 
-.down-arrow{
-  display: flex;
-  font-size: 2rem;
-  color: #000;
-  cursor: pointer;
-  user-select: none;
+.text{
+  margin-top: 5px;
 }
 
-.bg{
-  background-image: url(./NFL\ Project\ Background.png);
-  margin: 0px;
-  height: 100vh;
-  background-size: cover;
-  text-align: center;
-  align-items: center;
-  position: absolute;
-  top: 0px;
-  right:0px;
-  bottom: 0px;
-  left: 0px;
-
-}
-
-
-
-.centerBox{
-  max-height: 80%;
-  max-width: 70%;
-  position: relative;
-  display: flex;
-  justify-content: space-evenly;
+.info {
+  position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, .4);
-  box-shadow: 0 15px 20px rgba(0, 0, 0, .2);
-  padding: 40px;
-  text-align: center;
-  font-size: 25px;
-  font-family: 'Roboto Condensed';
-  border-style: double;
-  flex-direction: column
-;}
+  transform: translate(-50%,-50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: white;
+  width:500px;
+  max-width: 80%;
+}
 
+.info.active{
+  transform: translate(-50%,-50%) scale(1);
+}
 
-.teamSelectBox{
+.info-header{
+  padding: 10px 15px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: space-around;
-  flex-direction: row;
-  margin: 15px;
-}
-.teamSelect{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
+  border-bottom: 1px solid black;
 }
 
-.teamSelectRight{
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+.info-header .title{
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.info-header .close-button{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.info-body{
+  padding: 10px 15px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#overlay {
+  position: fixed;
+  /*opacity: 0; */
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0, .5);
+  pointer-events: none;
+}
+
+#overlay.active{
+  opacity: 1;
+  pointer-events: all;
 }
