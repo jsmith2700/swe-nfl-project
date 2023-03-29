@@ -12,6 +12,7 @@ import O_Passing from './WebScraper/team_Stats/O_Passing.json';
 import O_Rushing from './WebScraper/team_Stats/O_Rushing.json';
 import O_Scoring from './WebScraper/team_Stats/O_Scoring.json';
 import O_Receiving from './WebScraper/team_Stats/O_Receiving.json';
+import Team_Info from './WebScraper/team_Stats/Team_Info.json';
 
 
 const ImageSlider = ({slides}) => {
@@ -59,6 +60,11 @@ const ImageSlider = ({slides}) => {
             
             
             <FaArrowAltCircleDown className='down-arrow' onClick={nextSlide}/>
+
+            <div class='text'>Location:</div>
+            <td class="locationArea">{Team_Info[current].location.city}</td>
+            <td class="locationArea">{Team_Info[current].location.team}</td>
+            <td class="locationArea">{Team_Info[current].location.stadium}</td>
             
             <div class='text'>Stats:</div>
             <table class="statsTable">

@@ -33,4 +33,3 @@ with open('../team_Stats/D_Receiving.json', 'w') as f:
     json.dump(sorted_team_stats, f)
 
     
-
